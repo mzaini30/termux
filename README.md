@@ -1,0 +1,2 @@
+# termux
+alias untuk teemux
