@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+ <title>Termux</title>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1">
+ <link rel="stylesheet" href="vendor/bootstrap.min.css">
+</head>
+<body>
+ <div class="vue">
+  <br>
+  <div class="container">
+   <div class="form-group">
+    <div class="input-group">
+     <div class="input-group-addon">Perintah</div>
+     <input type="text" class="form-control" v-model="perintah">
+    </div>
+   </div>
+   <div class="form-group">
+    <label for="">Kode program</label>
+    <textarea name="" id="" cols="30" rows="10" class="form-control" v-model="program"></textarea>
+    </div>
+    <div class="form-group">
+     <label for="">Script</label>
+     <textarea name="" id="" cols="30" rows="10" class="form-control" readonly>cd /data/data/com.termux/files/usr/bin
+touch {{ perintah }}
+chmod +x {{ perintah }}
+echo > {{ perintah }}
+{{ program | sesuaikan(perintah) }}</textarea>
+    </div>
+  </div>
+ </div>
+ <script src="vendor/jquery.min.js"></script>
+ <script src="vendor/vue.min.js"></script>
+ <script src="index.js"></script>
+</body>
+</html>
